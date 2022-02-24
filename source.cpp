@@ -34,8 +34,3 @@ int main() {
 	srand(time(NULL));
 	while (playGame(openMenu()) == 1);
 }
-
-/*
-	- powiekszyc snake'a na np width/20
-	- dokonczyc menu skorek (dodac label na gorze, dodac 2 nowe skorki np zolta i opcje niedostepne, a zielona zrobic mocniejszy zielony)
-*/
