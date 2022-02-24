@@ -48,7 +48,7 @@ void Game::render()
 
 	window->display();
 }
-// 
+ 
 void Game::snakeMove(sf::Clock& frameTime)
 {
 	snakeHead.move();
@@ -72,6 +72,7 @@ void Game::update(sf::Clock& frameTime) {
 	if (frameTime.getElapsedTime().asMilliseconds() >= 70 * difficulty && !paused && !end && !picking)
 		snakeMove(frameTime);
 }
+
 void Game::initVars(double width, double height) {
 	font.loadFromFile("Fonts/font4.ttf");
 	pixelFont.loadFromFile("Fonts/pixel.ttf");
@@ -83,7 +84,6 @@ void Game::initVars(double width, double height) {
 	textures.push_back(loadTexture("Images/rainbow.png"));
 	textures.push_back(loadTexture("Images/yellow.png"));
 	pointTexture.loadFromFile("Images/apple.png");
-
 
 	snakeHead = SnakeHead(width, height);
 	snakeBody = SnakeBody(width, height, snakeHead.get_pos());
