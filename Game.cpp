@@ -48,7 +48,7 @@ void Game::render()
 
 	window->display();
 }
-
+//
 void Game::snakeMove(sf::Clock& frameTime)
 {
 	snakeHead.move();
