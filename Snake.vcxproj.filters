@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{0a4bd743-49de-45df-a1fa-a42123f03c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{84a082aa-be50-4437-8f31-104a28450639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pause">
+      <UniqueIdentifier>{bab723c8-f99d-4c05-84fa-3d629862a448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skins">
+      <UniqueIdentifier>{38989c96-69a1-489f-adf4-4cff3500e277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".Main">
+      <UniqueIdentifier>{4e6f15c4-a31e-4c8e-aea3-0217ea1cfc2d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SnakeHead.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakeBody.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu_label.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse_cursor.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause_button.cpp">
+      <Filter>Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause_Label.cpp">
+      <Filter>Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause.cpp">
+      <Filter>Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_score.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="source.cpp">
+      <Filter>.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Signature.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveRectangle.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinButtons.cpp">
+      <Filter>Skins</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinPicker.cpp">
+      <Filter>Skins</Filter>
+    </ClCompile>
+    <ClCompile Include="Skins.cpp">
+      <Filter>Skins</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SnakeHead.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SnakeBody.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu_label.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse_cursor.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause_button.h">
+      <Filter>Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause_Label.h">
+      <Filter>Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause.h">
+      <Filter>Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_score.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Signature.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveRectangle.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinButtons.h">
+      <Filter>Skins</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinPicker.h">
+      <Filter>Skins</Filter>
+    </ClInclude>
+    <ClInclude Include="Skins.h">
+      <Filter>Skins</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
