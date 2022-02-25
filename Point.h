@@ -13,7 +13,7 @@ private:
 	sf::Sprite sprite;
 	bool free_pos(int x, int y, vector<sf::RectangleShape> rects, float snake_width);
 	bool randomColor = false;
-	short lasPickedNumber = -1;
+	short lastPickedNumber = -1;
 	int pickNewNumber(int seed);
 public:
 

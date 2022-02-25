@@ -55,6 +55,7 @@ void Game::snakeMove(sf::Clock& frameTime)
 	snakeBody.afterMove(snakeHead.get_pos());
 	skins.set_rainbow_color(snakeHead, snakeBody);
 	frameTime.restart();
+	
 	if (point.collision(snakeHead.get_shape().getGlobalBounds())) {
 		point.pick_new_position(snakeBody.get_shapes(), snakeHead.get_shape().getSize().x);
 		snakeBody.add_body();
@@ -62,9 +63,9 @@ void Game::snakeMove(sf::Clock& frameTime)
 		gameScore.set_string(score);
 		if (point.isRandom()) {
 			snakeHead.set_color(point.getColor());
-			snakeBody.set_color(point.getColor());
+			snakeBody.set_color(point.getColor());	
+	 		point.changeColor();
 		}
-		point.changeColor();
 	}
 
 	if (snakeBody.body_colision(snakeHead.get_shape().getGlobalBounds())) {
@@ -147,7 +148,12 @@ void Game::events(sf::Clock& frameTime)
 					if (*temp != -1) {
 						skins.setSkin(*temp);
 						skins.updateSkin(snakeHead, snakeBody);
-						*temp == 5 ? point.switchRandomColor(true) : point.switchRandomColor(false);
+						if (*temp == 5)
+							point.switchRandomColor(true);
+						else {
+							point.switchRandomColor(false);
+							point.changeColor();
+						}
 						picking = false;
 					}
 					delete temp;

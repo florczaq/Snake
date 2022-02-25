@@ -21,13 +21,12 @@ SkinPicker::SkinPicker(double width, double height, sf::Color color, sf::Vector2
 	text.setOutlineThickness(3);
 	text.setPosition(position.x, height*0.20);
 
-
 	blueSkin = SkinButtons(sf::Vector2f(width *0.45, height * 0.2), sf::Vector2f(position.x - width * 0.25, position.y - height * 0.12), font, 70, "Blue", texture.at(0));
 	greenSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x + width * 0.25, position.y - height * 0.12), font, 70, "Green",texture.at(1));
 	purpleSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x - width * 0.25, position.y + height * 0.13), font, 70, "Purple",texture.at(2));
 	rainbowSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x + width * 0.25, position.y + height * 0.13), font, 70, "Rainbow",texture.at(3));
 	yellowSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x - width * 0.25, position.y + height * 0.38), font, 70, "Yellow", texture.at(4));
-	specialSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x + width * 0.25, position.y + height * 0.38), font, 70, "GetAppleColor", texture.at(5));
+	specialSkin = SkinButtons(sf::Vector2f(width * 0.45, height * 0.2), sf::Vector2f(position.x + width * 0.25, position.y + height * 0.38), font, 70, "Point's", texture.at(5));
 }
 
 int SkinPicker::hover(sf::FloatRect mouseBounds, bool pressed)

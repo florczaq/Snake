@@ -35,7 +35,8 @@ int Point::pickNewNumber(int seed)
 {
 	int n = 0;
 	do n = rand() % seed;
-	while (n == lasPickedNumber);
+	while (n == lastPickedNumber);
+	lastPickedNumber = n;
 	return n;
 }
 
