@@ -12,7 +12,7 @@ private:
 	double width = 0, height = 0;
 	sf::RectangleShape background;
 	sf::Text text;
-	SkinButtons blueSkin, greenSkin, purpleSkin, rainbowSkin, yellowSkin, tempSkin;
+	SkinButtons blueSkin, greenSkin, purpleSkin, rainbowSkin, yellowSkin, specialSkin;
 	sf::Texture blueTexture, greenTexture, purpleTexture, rainbowTexture;
 public:
 	SkinPicker();

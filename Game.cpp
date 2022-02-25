@@ -64,7 +64,9 @@ void Game::snakeMove(sf::Clock& frameTime)
 			snakeHead.set_color(point.getColor());
 			snakeBody.set_color(point.getColor());
 		}
+		point.changeColor();
 	}
+
 	if (snakeBody.body_colision(snakeHead.get_shape().getGlobalBounds())) {
 		end = true;
 		endMenu.set_score(score);
@@ -87,6 +89,7 @@ void Game::initVars(double width, double height) {
 	textures.push_back(loadTexture("Images/purple.png"));
 	textures.push_back(loadTexture("Images/rainbow.png"));
 	textures.push_back(loadTexture("Images/yellow.png"));
+	textures.push_back(loadTexture("Images/appleSkin.png"));
 	pointTexture.loadFromFile("Images/apple.png");
 
 	snakeHead = SnakeHead(width, height);

@@ -31,22 +31,32 @@ bool Point::free_pos(int x, int y, vector <sf::RectangleShape> rects, float snak
 	return true;
 }
 
+int Point::pickNewNumber(int seed)
+{
+	int n = 0;
+	do n = rand() % seed;
+	while (n == lasPickedNumber);
+	return n;
+}
+
 void Point::changeColor()
 {
 	if (randomColor) {
-		switch (rand()%11) {
-		case 1:		rectangle.setFillColor(sf::Color(255, 0, 0));		break;
-		case 2:		rectangle.setFillColor(sf::Color(255, 135, 0));		break;
-		case 3:		rectangle.setFillColor(sf::Color(255, 211, 0));		break;
-		case 4:		rectangle.setFillColor(sf::Color(222, 255, 10));	break;
-		case 5:		rectangle.setFillColor(sf::Color(161, 255, 10));	break;
-		case 6:		rectangle.setFillColor(sf::Color(10, 255, 153));	break;
-		case 7:		rectangle.setFillColor(sf::Color(10, 239, 255));	break;
-		case 8:		rectangle.setFillColor(sf::Color(20, 125, 245));	break;
-		case 9:		rectangle.setFillColor(sf::Color(88, 10, 255));		break;
-		case 10:	rectangle.setFillColor(sf::Color(190, 10, 255));	break;
+		switch (pickNewNumber(11)) {
+		case 1:		sprite.setColor(sf::Color(255, 0, 0));		break;
+		case 2:		sprite.setColor(sf::Color(255, 135, 0));	break;
+		case 3:		sprite.setColor(sf::Color(255, 211, 0));	break;
+		case 4:		sprite.setColor(sf::Color(222, 255, 10));	break;
+		case 5:		sprite.setColor(sf::Color(161, 255, 10));	break;
+		case 6:		sprite.setColor(sf::Color(10, 255, 153));	break;
+		case 7:		sprite.setColor(sf::Color(10, 239, 255));	break;
+		case 8:		sprite.setColor(sf::Color(20, 125, 245));	break;
+		case 9:		sprite.setColor(sf::Color(88, 10, 255));	break;
+		case 10:	sprite.setColor(sf::Color(190, 10, 255));	break;
 		}
 	}
+	else
+		sprite.setColor(sf::Color::Red);
 }
 
 void Point::pick_new_position(vector <sf::RectangleShape> rects, float snake_width) {
@@ -67,7 +77,7 @@ void Point::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 sf::Color Point::getColor()
 {
-	return rectangle.getFillColor();
+	return sprite.getColor();
 }
 
 void Point::switchRandomColor(bool randomColor){
