@@ -6,7 +6,7 @@ SnakeHead::SnakeHead()
 }
 
 SnakeHead::SnakeHead(float width, float height) {
-	rectangle.setSize(sf::Vector2f(width / 20 -10, width / 20 -10));
+	rectangle.setSize(sf::Vector2f(width / 20, width / 20));
 	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 	rectangle.setFillColor(headColor);
 	rectangle.setPosition(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
