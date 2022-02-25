@@ -37,6 +37,7 @@ private:
 	SkinPicker skinPicker;
 
 	bool paused = false, end = false, picking = false;
+	bool gameOver3sec = false;
 	float difficulty = -1;
 	int score = 0, result = 1;
 	void snakeMove(sf::Clock& frameTime);

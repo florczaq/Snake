@@ -66,12 +66,11 @@ int SkinPicker::hover(sf::FloatRect mouseBounds, bool pressed)
 	}
 	else yellowSkin.hoverStyle(false);
 
-	if (false)
-		if (tempSkin.hover(mouseBounds)) {
-			if (!pressed) tempSkin.hoverStyle(true);
-			else return 5;
-		}
-		else tempSkin.hoverStyle(false);
+	if (tempSkin.hover(mouseBounds)) {
+		if (!pressed) tempSkin.hoverStyle(true);
+		else return 5;
+	}
+	else tempSkin.hoverStyle(false);
 
 	return -1;
 }

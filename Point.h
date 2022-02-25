@@ -13,13 +13,13 @@ private:
 	sf::Sprite sprite;
 	bool free_pos(int x, int y, vector<sf::RectangleShape> rects, float snake_width);
 	bool randomColor = false;
-	void changeColor();
 public:
 
 	Point();
 	Point(float wwidth, float wheight, vector <sf::RectangleShape> rectangles, float snake_width, sf::Texture& texture);
 
 	sf::Color getColor();
+	void changeColor();
 	void switchRandomColor(bool randomColor);
 	void pick_new_position(vector <sf::RectangleShape> rectangles, float snake_width);
 	bool collision(sf::FloatRect rect);

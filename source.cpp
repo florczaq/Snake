@@ -20,9 +20,11 @@ float openMenu() {
 }
 
 int playGame(float difficulty) {
+	
 	Game game(WINDOW_WIDTH, WINDOW_HEIGHT, difficulty);
 	sf::Clock frameTime;
 	frameTime.restart();
+
 	while (game.windowIsOpen()) {
 		game.update(frameTime);
 		game.render();

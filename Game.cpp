@@ -49,6 +49,7 @@ void Game::render()
 	window->display();
 }
 
+
 void Game::snakeMove(sf::Clock& frameTime)
 {
 	snakeHead.move();
@@ -63,6 +64,7 @@ void Game::snakeMove(sf::Clock& frameTime)
 		if (point.isRandom()) {
 			snakeHead.set_color(point.getColor());
 			snakeBody.set_color(point.getColor());
+			point.changeColor();
 		}
 	}
 	if (snakeBody.body_colision(snakeHead.get_shape().getGlobalBounds())) {
@@ -159,7 +161,6 @@ void Game::events(sf::Clock& frameTime)
 					paused = true;
 				}
 			}
-
 			break;
 
 		case sf::Event::KeyPressed:

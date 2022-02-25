@@ -6,10 +6,12 @@ SnakeHead::SnakeHead()
 }
 
 SnakeHead::SnakeHead(float width, float height) {
-	rectangle.setSize(sf::Vector2f(width / 20, width / 20));
+	rectangle.setSize(sf::Vector2f(width / 20 -10, width / 20 -10));
 	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 	rectangle.setFillColor(headColor);
 	rectangle.setPosition(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
+	rectangle.setOutlineColor(sf::Color::Black);
+	rectangle.setOutlineThickness(1);
 	this->ww = width, this->wh = height;
 	speed = rectangle.getSize().x;
 }
