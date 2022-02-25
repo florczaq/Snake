@@ -12,9 +12,9 @@ Point::Point(float width, float height, vector <sf::RectangleShape> rectangles, 
 	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 	rectangle.setFillColor(sf::Color::Red);
 	rectangle.setPosition(width / 3, height / 2);
-
+	
 	sprite.setTexture(texture);
-	sprite.setColor(sf::Color::White);
+	sprite.setColor(sf::Color::Red);
 	sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
 	sprite.setPosition(rectangle.getPosition());
 	this->width = width;
