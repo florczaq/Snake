@@ -88,5 +88,5 @@ void SkinPicker::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	target.draw(purpleSkin);
 	target.draw(rainbowSkin);
 	target.draw(yellowSkin);
-	//target.draw(tempSkin);
+	target.draw(tempSkin);
 }

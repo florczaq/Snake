@@ -12,7 +12,7 @@ Point::Point(float width, float height, vector <sf::RectangleShape> rectangles, 
 	rectangle.setOrigin(rectangle.getSize().x / 2, rectangle.getSize().y / 2);
 	rectangle.setFillColor(sf::Color::Red);
 	rectangle.setPosition(width / 3, height / 2);
-	
+
 	sprite.setTexture(texture);
 	sprite.setColor(sf::Color::Red);
 	sprite.setOrigin(sprite.getLocalBounds().width / 2, sprite.getLocalBounds().height / 2);
@@ -31,6 +31,24 @@ bool Point::free_pos(int x, int y, vector <sf::RectangleShape> rects, float snak
 	return true;
 }
 
+void Point::changeColor()
+{
+	if (randomColor) {
+		switch (rand()%11) {
+		case 1:		rectangle.setFillColor(sf::Color(255, 0, 0));		break;
+		case 2:		rectangle.setFillColor(sf::Color(255, 135, 0));		break;
+		case 3:		rectangle.setFillColor(sf::Color(255, 211, 0));		break;
+		case 4:		rectangle.setFillColor(sf::Color(222, 255, 10));	break;
+		case 5:		rectangle.setFillColor(sf::Color(161, 255, 10));	break;
+		case 6:		rectangle.setFillColor(sf::Color(10, 255, 153));	break;
+		case 7:		rectangle.setFillColor(sf::Color(10, 239, 255));	break;
+		case 8:		rectangle.setFillColor(sf::Color(20, 125, 245));	break;
+		case 9:		rectangle.setFillColor(sf::Color(88, 10, 255));		break;
+		case 10:	rectangle.setFillColor(sf::Color(190, 10, 255));	break;
+		}
+	}
+}
+
 void Point::pick_new_position(vector <sf::RectangleShape> rects, float snake_width) {
 	int pickx = 0, picky = 0;
 	do	pickx = rand() % 19,
@@ -45,4 +63,18 @@ bool Point::collision(sf::FloatRect rect) {
 void Point::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(sprite);
+}
+
+sf::Color Point::getColor()
+{
+	return rectangle.getFillColor();
+}
+
+void Point::switchRandomColor(bool randomColor){
+	this->randomColor = randomColor;
+}
+
+const bool Point::isRandom()
+{
+	return randomColor;
 }
